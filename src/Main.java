@@ -1,6 +1,6 @@
-import classes.KaratsubaAlgorithm;
-
 import java.math.BigInteger;
+
+import static classes.AlgorithmFromScratch.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,10 +13,6 @@ public class Main {
         else {
             System.out.println("No arguments provided or not enough arguments");
         }
-        int x = 1234;
-        int y = 45674566;
-        int karamult = KaratsubaAlgorithm.karatsuba_alg(x, y);
-        System.out.println(karamult);
-
+        theSlowestAlgorithm("12348", "84321");
     }
 }
