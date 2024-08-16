@@ -1,3 +1,5 @@
+import classes.KaratsubaAlgorithm;
+
 import java.math.BigInteger;
 
 public class Main {
@@ -11,6 +13,10 @@ public class Main {
         else {
             System.out.println("No arguments provided or not enough arguments");
         }
+        int x = 1234;
+        int y = 45674566;
+        int karamult = KaratsubaAlgorithm.karatsuba_alg(x, y);
+        System.out.println(karamult);
 
     }
 }
