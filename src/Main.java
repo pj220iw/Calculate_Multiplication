@@ -13,6 +13,6 @@ public class Main {
         else {
             System.out.println("No arguments provided or not enough arguments");
         }
-        theSlowestAlgorithm("1234", "1234");
+        theSlowestAlgorithm("11111111", "1111");
     }
 }
