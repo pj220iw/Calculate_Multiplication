@@ -14,6 +14,7 @@ public class Main {
             System.out.println("No arguments provided or not enough arguments");
         }
         //theSlowestAlgorithm("11111111", "1111");
-        trialAndError("1234","1234");
+        String skuska = trialAndError("1234","1234");
+        System.out.println(skuska);
     }
 }
