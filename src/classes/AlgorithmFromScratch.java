@@ -37,33 +37,20 @@ public class AlgorithmFromScratch {
     }
     public static String trialAndError(String number1, String number2){
         int length_x = number1.length();
-        //System.out.println(length_x);
         int length_y = number2.length();
-        //[1234] [1234]
         int result[] = new int[length_x + length_y];
-        System.out.println("result: "+ Arrays.toString(result));
+
         for (int i = length_x - 1; i >= 0; i--) {
+            int carry = 0;
+            //to swap ASCII to numbers.
             int digit_x = number1.charAt(i) - '0';
-            //System.out.println(digit_x);
             for (int j = length_y - 1; j >= 0; j--) {
                 int digit_y = number2.charAt(j) - '0';
-                //System.out.println("result: "+ Arrays.toString(new int[]{i, j}));
-                //System.out.println(digit_y);
                 int final_result = digit_x * digit_y;
                 //result[i+j+1] = carry
                 int sum = final_result + result[i+j+1];
-                //System.out.println("Sum: "+ final_result);
-//                System.out.println(result.length);
-//                System.out.println("Beforeresult[i+j]: "+result[i+j]);
-//                System.out.println("result[i+j+1]: "+result[i+j+1]);
-//                System.out.println("sum: "+sum);
-                // [4936]
-                //[3702]
-                result[i+j+1] = sum%10;
                 result[i+j] += sum/10;
-                System.out.println("Afterresult[i+j]: "+result[i+j]);
-                System.out.println("result[i+j+1]: "+result[i+j+1]);
-                System.out.println("-----------------------------------------");
+                result[i+j+1] = sum%10;
 
             }
         }
