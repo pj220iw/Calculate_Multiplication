@@ -15,7 +15,6 @@ public class AlgorithmFromScratch {
                 result[i+j+1] = sum%10;
                 result[i+j] += sum/10;
             }
-
         }
         StringBuilder strbuilder = new StringBuilder();
         for (int result_string : result){
