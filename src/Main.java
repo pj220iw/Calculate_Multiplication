@@ -4,17 +4,14 @@ import static classes.AlgorithmFromScratch.*;
 
 public class Main {
     public static void main(String[] args) {
-        if(args.length == 2){
-            BigInteger first_number = new BigInteger(args[0]);
-            BigInteger second_number = new BigInteger(args[1]);
-            BigInteger result = first_number.multiply(second_number);
-            System.out.println(result);
-        }
-        else {
-            System.out.println("No arguments provided or not enough arguments");
-        }
-        //theSlowestAlgorithm("11111111", "1111");
-        String skuska = multiplyTwoNumbers("12345678901234567890","11111111111111111111");
-        System.out.println(skuska);
+        if (args[0].equals("--alg1") && args.length == 3) {
+                BigInteger first_number = new BigInteger(args[1]);
+                BigInteger second_number = new BigInteger(args[2]);
+                BigInteger result_alg1 = first_number.multiply(second_number);
+                System.out.printf(String.valueOf(result_alg1));
+            } else if (args[0].equals("--alg2") && args.length == 3) {
+            String result_alg2 = multiplyTwoNumbers(args[1], args[2]);
+            System.out.printf(result_alg2);
+        }else System.out.println("No arguments provided or not enough arguments");
     }
 }
