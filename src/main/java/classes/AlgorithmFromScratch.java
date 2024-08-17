@@ -27,4 +27,3 @@ public class AlgorithmFromScratch {
         return strbuilder.substring(i);
     }
 }
-
