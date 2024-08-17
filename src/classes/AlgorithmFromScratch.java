@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Arrays;
+
 public class AlgorithmFromScratch {
     public static void theSlowestAlgorithm(String x, String y){
         int length_x = x.length();
@@ -7,6 +9,9 @@ public class AlgorithmFromScratch {
         int length_y = y.length();
         int length_y_for = y.length();
         //[1234] [1234]
+        int result[] = new int[length_x + length_y];
+        System.out.println("result: "+ Arrays.toString(result));
+
         long total = 0;
         long total_2 = 0;
         long multiplier = 1;
@@ -29,6 +34,15 @@ public class AlgorithmFromScratch {
             length_y -= 1;
             System.out.println(total);
         }
+    }
+    public static void trialAndError(String number1, String number2){
+        int length_x = number1.length();
+        //System.out.println(length_x);
+        int length_y = number2.length();
+        //[1234] [1234]
+        int result[] = new int[length_x + length_y];
+        System.out.println("result: "+ Arrays.toString(result));
+
     }
 }
 
